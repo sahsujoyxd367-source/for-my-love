@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Nini 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0a1a3a, #000814);
+  color: white;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ffb3d9;
+  text-shadow: 0 0 20px #ff69b4;
+}
+
+h2 {
+  color: #9ad0ff;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin: 20px 0;
+}
+
+.heart {
+  font-size: 2em;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.photo-section {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.photo {
+  width: 260px;
+  height: 330px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 30px rgba(255,105,180,0.5);
+  transition: transform 0.4s;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s;
+  color: #ffd6ec;
+  font-style: italic;
+}
+
+.reveal:hover .hidden {
+  opacity: 1;
+}
+
+.magic-box {
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 30px 0;
+  box-shadow: 0 0 25px rgba(154,208,255,0.4);
+}
+
+.question {
+  font-size: 2em;
+  margin-top: 50px;
+  color: #ffb3d9;
+}
+
+button {
+  background: linear-gradient(45deg, #ff69b4, #9ad0ff);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+  margin-top: 20px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.emoji {
+  position: fixed;
+  top: -10px;
+  animation: fall linear infinite;
+  font-size: 24px;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Hey Nini 💖</h1>
+  <div class="heart">❤️</div>
+
+  <p>
+    Today is <b>Propose Day</b>… and honestly, I couldn’t imagine a better day to say this.
+    This is my <b>first time</b> doing something like this, and yeah… I’m nervous.
+    My heart is beating fast while writing this, but it’s because you matter so much to me.
+  </p>
+
+  <div class="magic-box">
+    <p>
+      I still remember the first time I saw you on <b>SEA SOUL</b>.
+      It wasn’t normal. It wasn’t casual.
+      It was love at first sight — the kind you don’t plan, the kind that just happens.
+      Something inside me said, <i>“She’s different.”</i>
+    </p>
+
+    <p>
+      And then we talked… and talked… and talked.
+      Instagram didn’t just bring us closer, it made me fall for you even more.
+      Your words, your vibe, your presence — everything about you slowly became important to me.
+      Without realizing it, you became precious… irreplaceable.
+    </p>
+  </div>
+
+  <h2>These are my favorite views ✨</h2>
+
+  <div class="photo-section">
+
+  <div>
+    <img src="images/aashi1.jpeg" width="320" alt="Nini Photo 1">
+    <p>You are effortlessly beautiful 💗</p>
+  </div>
+
+  <br>
+
+  <div>
+    <img src="images/aashi2.jpeg" width="320" alt="Nini Photo 2">
+    <p>My eyes always search for you 🫶</p>
+  </div>
+
+</div>
+
+  <div class="magic-box">
+    <p>
+      You’re not just someone I like —
+      you feel like <b>my type</b>, my kind of soul, someone just like me.
+      The way you exist, the way you think, the way you feel…
+      it feels familiar, warm, safe.
+    </p>
+
+    <p>
+      You make ordinary days feel special.
+      You make my heart feel calm and excited at the same time.
+      And honestly… I don’t want a future where you’re not part of it.
+    </p>
+  </div>
+
+  <div class="question">
+    Will you be mine forever? 💍💖
+  </div>
+
+  <button onclick="alert('No matter your answer… you will always be special to me 💗')">
+    💕 My Heart Is Yours 💕
+  </button>
+
+</div>
+
+<script>
+const emojis = ["💖","🐻","🐶","🐱","✨","🦋","💫","🌸"];
+
+setInterval(() => {
+  const e = document.createElement("div");
+  e.className = "emoji";
+  e.innerText = emojis[Math.floor(Math.random()*emojis.length)];
+  e.style.left = Math.random() * 100 + "vw";
+  e.style.animationDuration = (3 + Math.random()*4) + "s";
+  document.body.appendChild(e);
+
+  setTimeout(() => e.remove(), 7000);
+}, 300);
+</script>
+
+</body>
+</html>
